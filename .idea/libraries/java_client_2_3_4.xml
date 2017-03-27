@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="java-client-2.3.4">
+    <CLASSES>
+      <root url="jar://D:/maven_repo/com/couchbase/client/java-client/2.3.4/java-client-2.3.4.jar!/" />
+      <root url="jar://D:/maven_repo/com/couchbase/client/core-io/1.3.4/core-io-1.3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/java-client-2.3.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
