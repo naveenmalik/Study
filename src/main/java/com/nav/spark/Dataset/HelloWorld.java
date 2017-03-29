@@ -9,11 +9,11 @@ import org.apache.spark.sql.SparkSession;
 /**
  * Created by Neo on 3/26/2017.
  */
-public class HellowWorld {
+public class HelloWorld {
 
     public static void main(String[] args) throws AnalysisException {
 
-        HellowWorld hellowWorld = new HellowWorld();
+        HelloWorld hellowWorld = new HelloWorld();
         SparkConf conf = new SparkConf().setMaster("local").setAppName("Hellow World");
 
         SparkSession sparkSession = SparkSession
