@@ -43,7 +43,13 @@ public class CreateSchemaProgrammatically {
             }
         });
 
-        Dataset<Row> peopleDs = sparkSession.createDataFrame(rowRDD,schema);
+        Dataset<Row> employeeDS = sparkSession.createDataFrame(rowRDD,schema);
+
+        employeeDS.createOrReplaceTempView("employee");
+
+        Dataset<Row> result = sparkSession.sql("select * from employee");
+
+        result.show();
 
     }
 }
