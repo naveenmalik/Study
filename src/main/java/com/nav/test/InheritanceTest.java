@@ -23,7 +23,7 @@ class B extends A{
     }
 }
 
-class c{
+class C extends B{
     public static void main(String[] args) {
         A o1 = new A();
         B o2 = new B();
