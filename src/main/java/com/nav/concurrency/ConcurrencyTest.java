@@ -9,7 +9,12 @@ public class ConcurrencyTest {
 
         Runnable task = ()->{
             String threadname = Thread.currentThread().getName();
-            System.out.println("Thread name is:" + threadname);
+            try {
+                Thread.currentThread().sleep(9000);
+                System.out.println("Thread name is:" + threadname);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         };
 
         task.run();

@@ -1,5 +1,7 @@
 package com.nav.spark.file;
 
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.sql.SparkSession;
@@ -10,11 +12,11 @@ import org.apache.spark.sql.SparkSession;
 public class JsonFileTest {
 
     public static void main(String[] args) {
+        Logger.getLogger("org").setLevel(Level.OFF);
+        Logger.getLogger("akka").setLevel(Level.OFF);
         SparkConf conf = new SparkConf().setMaster("local").setAppName("TestJsonFile");
         SparkSession session = SparkSession.builder().config(conf).getOrCreate();
 
-        //JavaSparkContext jsc = session.
-
-       // session.read().json("");
+        session.read().json("D:\\temp\\data\\input\\temp.json").show();
     }
 }
